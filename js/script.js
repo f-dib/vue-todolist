@@ -33,11 +33,5 @@ createApp({
 
         },
 
-        // linethroughTask() {
-
-        //     this.tasks
-
-        // },
-
     }
 }).mount('#app');

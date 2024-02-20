@@ -26,7 +26,7 @@
         <ul class="list-group">
             <li v-for="(currentTask, index) in tasks" class="list-group-item d-flex justify-content-between">
                 <div>
-                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" @click="linethroughTask(index)">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" :checked="currentTask.done" @change="currentTask.done = !currentTask.done">
                     <label class="form-check-label" :class=" currentTask.done == true ? 'text-decoration-line-through' : ''" for="firstCheckbox">{{currentTask.text}}</label>
                 </div>
                 <div>
