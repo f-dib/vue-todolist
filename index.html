@@ -24,9 +24,14 @@
     <div id="app" class="container py-5">
         
         <ul class="list-group">
-            <li v-for="(currentTask, index) in tasks" class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" @click="linethroughTask(index)">
-              <label class="form-check-label" :class=" currentTask.done == true ? 'text-decoration-line-through' : ''" for="firstCheckbox">{{currentTask.text}}</label>
+            <li v-for="(currentTask, index) in tasks" class="list-group-item d-flex justify-content-between">
+                <div>
+                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" @click="linethroughTask(index)">
+                    <label class="form-check-label" :class=" currentTask.done == true ? 'text-decoration-line-through' : ''" for="firstCheckbox">{{currentTask.text}}</label>
+                </div>
+                <div>
+                    <i @click="deleteTask(index)" class="fa-regular fa-trash-can"></i>
+                </div>
             </li>
           </ul>
 

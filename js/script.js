@@ -26,6 +26,13 @@ createApp({
     },
     methods: {
 
+
+        deleteTask(taskIndex) {
+
+            this.tasks.splice(taskIndex, 1);
+
+        },
+
         // linethroughTask() {
 
         //     this.tasks
