@@ -6,21 +6,27 @@ createApp({
     data() {
         return {
 
+            // object with tasks
             tasks: [
                 { 
-                    text: "ciao",
+                    text: "100 push-ups",
                     done: true
                 },
                 {
-                    text: "ciao",
+                    text: "100 sit-ups",
                     done: false
                 },
                 {
-                    text: "ciao",
+                    text: "100 squats",
+                    done: false
+                },
+                {
+                    text: "10K run",
                     done: false
                 }
             ],
 
+            // 
             newTask: '',
 
         }
@@ -28,20 +34,18 @@ createApp({
     methods: {
 
         deleteTask(taskIndex) {
-
+            
+            // delete the element from the tasks array that corresponds to the index reported in the parameter
             this.tasks.splice(taskIndex, 1);
 
         },
 
         addTask() {
 
-            // aggiungo il testo scritto dentro il campo di input alla lista dei task
-            // testo del campo di input:
-            // console.log(this.newTask)
-
+            // Add the text written inside the input field to the task list
             this.tasks.push({text: this.newTask, done: false}),
 
-            // cancello il contenuto del campo di input
+            // I delete the contents of the input field
             this.newTask = "";
 
         },
