@@ -6,8 +6,31 @@ createApp({
     data() {
         return {
 
-            
-            
+            tasks: [
+            { 
+                text: "ciao",
+                done: false
+            },
+            {
+                text: "ciao",
+                done: true
+            },
+            {
+                text: "ciao",
+                done: true
+            }
+
+            ],
+
         }
+    },
+    methods: {
+
+        // linethroughTask() {
+
+        //     this.tasks
+
+        // },
+
     }
 }).mount('#app');
