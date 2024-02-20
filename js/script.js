@@ -9,15 +9,15 @@ createApp({
             tasks: [
                 { 
                     text: "ciao",
+                    done: true
+                },
+                {
+                    text: "ciao",
                     done: false
                 },
                 {
                     text: "ciao",
-                    done: true
-                },
-                {
-                    text: "ciao",
-                    done: true
+                    done: false
                 }
             ],
 

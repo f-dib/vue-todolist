@@ -37,7 +37,7 @@
 
           <div id="add-task" class="py-4 ">
             <div class="input-group mb-3">
-                <input v-model="newTask" type="text" class="form-control" placeholder="Testo del task" aria-label="Testo del task" aria-describedby="add-task">
+                <input v-model="newTask" type="text" class="form-control" placeholder="Aggiungi Task" aria-label="Aggiungi Task" aria-describedby="add-task" @keyup.enter="addTask">
                 <button class="btn btn-outline-secondary" type="button" id="add-task" @click="addTask()">
                     <i class="fa-solid fa-plus"></i>
                 </button>
