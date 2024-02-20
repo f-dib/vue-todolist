@@ -27,13 +27,22 @@
             <li v-for="(currentTask, index) in tasks" class="list-group-item d-flex justify-content-between">
                 <div>
                     <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" :checked="currentTask.done" @change="currentTask.done = !currentTask.done">
-                    <label class="form-check-label" :class=" currentTask.done == true ? 'text-decoration-line-through' : ''" for="firstCheckbox">{{currentTask.text}}</label>
+                    <label class="form-check-label" :class="currentTask.done == true ? 'text-decoration-line-through' : ''" for="firstCheckbox">{{currentTask.text}}</label>
                 </div>
                 <div>
                     <i @click="deleteTask(index)" class="fa-regular fa-trash-can"></i>
                 </div>
             </li>
           </ul>
+
+          <div id="add-task" class="py-4 ">
+            <div class="input-group mb-3">
+                <input v-model="newTask" type="text" class="form-control" placeholder="Testo del task" aria-label="Testo del task" aria-describedby="add-task">
+                <button class="btn btn-outline-secondary" type="button" id="add-task" @click="addTask()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
 
     </div>
 
